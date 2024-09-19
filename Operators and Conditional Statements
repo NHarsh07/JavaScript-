@@ -1,0 +1,62 @@
+Operators in JavaScript
+Operators in JavaScript are symbols used to perform operations on values and variables.
+
+1. Arithmetic Operators
+Arithmetic operators are used to perform mathematical calculations.
+
+Operator  Description		      Example
++	        Addition		        5 + 2 = 7
+-	        Subtraction		      5 - 2 = 3
+*	        Multiplication      5 * 2 = 10
+/	        Division		        5 / 2 = 2.5
+%	        Modulus (remainder) 5 % 2 = 1
+++	      Increment	          let x = 5; x++ = 6
+--	      Decrement	        	let x = 5; x-- = 4
+
+2. Assignment Operators
+Assignment operators are used to assign values to variables.
+
+Operator	Decription		             Example
+=		      Assigns value		           x = 10
++=	      Adds and assigns	         x += 5 (x = x + 5)
+-=	      Subtracts and assigns	     x -= 5 (x = x - 5)
+*=	      Multiplies and assigns	   x *= 5 (x = x * 5)
+/=	      Divides and assigns	       x /= 5 (x = x / 5)
+
+3. Comparison Operators
+Comparison operators are used to compare two values.
+
+Operator	Description			            Example
+==		Equal to		                  	5 == "5" (true)
+===		Strict equal (value & type)	    5 === "5" (false)
+!=		Not equal			5 != "6" (true)
+!==		Strict not equal		5 !== "5" (true)
+>		Greater than			5 > 2 (true)
+<		Less than			5 < 2 (false)
+>=		Greater than or equal to	5 >= 2 (true)
+<=		Less than or equal to		5 <= 2 (false)
+
+4. Logical Operators
+Logical operators are used to combine or invert boolean expressions.
+
+Operator	Description		Example
+&&		Logical AND		(5 > 2) && (3 < 4) (true)		`
+!		Logical NOT		!(5 > 2) (false)
+
+5. Ternary Operator
+The ternary operator is a shorthand for conditional statements.
+
+Syntax:
+condition ? exprIfTrue : exprIfFalse
+
+Example:
+let age = 18;
+let canVote = (age >= 18) ? "Yes" : "No";
+console.log(canVote); // Output: "Yes"
+
+
+
+
+
+
+
