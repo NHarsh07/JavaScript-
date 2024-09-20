@@ -1,62 +1,61 @@
-Operators in JavaScript
-Operators in JavaScript are symbols used to perform operations on values and variables.
+/*
+  Operators in JavaScript
+  Operators are symbols used to perform operations on values and variables.
+*/
 
-1. Arithmetic Operators
-Arithmetic operators are used to perform mathematical calculations.
+/* 1. Arithmetic Operators */
+// Arithmetic operators are used to perform mathematical calculations.
 
-Operator  Description		      Example
-+	        Addition		        5 + 2 = 7
--	        Subtraction		      5 - 2 = 3
-*	        Multiplication      5 * 2 = 10
-/	        Division		        5 / 2 = 2.5
-%	        Modulus (remainder) 5 % 2 = 1
-++	      Increment	          let x = 5; x++ = 6
---	      Decrement	        	let x = 5; x-- = 4
+let a = 5, b = 2;
 
-2. Assignment Operators
-Assignment operators are used to assign values to variables.
+console.log("Addition: " + (a + b));           // 5 + 2 = 7
+console.log("Subtraction: " + (a - b));        // 5 - 2 = 3
+console.log("Multiplication: " + (a * b));     // 5 * 2 = 10
+console.log("Division: " + (a / b));           // 5 / 2 = 2.5
+console.log("Modulus: " + (a % b));            // 5 % 2 = 1
 
-Operator	Decription		             Example
-=		      Assigns value		           x = 10
-+=	      Adds and assigns	         x += 5 (x = x + 5)
--=	      Subtracts and assigns	     x -= 5 (x = x - 5)
-*=	      Multiplies and assigns	   x *= 5 (x = x * 5)
-/=	      Divides and assigns	       x /= 5 (x = x / 5)
+// Increment and Decrement
+let x = 5;
+console.log("Increment: " + (++x));            // x++ = 6
+console.log("Decrement: " + (--x));            // x-- = 4
 
-3. Comparison Operators
-Comparison operators are used to compare two values.
+/* 2. Assignment Operators */
+// Assignment operators are used to assign values to variables.
 
-Operator	Description			            Example
-==		Equal to		                  	5 == "5" (true)
-===		Strict equal (value & type)	    5 === "5" (false)
-!=		Not equal			5 != "6" (true)
-!==		Strict not equal		5 !== "5" (true)
->		Greater than			5 > 2 (true)
-<		Less than			5 < 2 (false)
->=		Greater than or equal to	5 >= 2 (true)
-<=		Less than or equal to		5 <= 2 (false)
+let y = 10;
+y += 5;   // Equivalent to y = y + 5
+console.log("Addition Assignment: " + y);      // 10 + 5 = 15
 
-4. Logical Operators
-Logical operators are used to combine or invert boolean expressions.
+y -= 5;   // Equivalent to y = y - 5
+console.log("Subtraction Assignment: " + y);   // 15 - 5 = 10
 
-Operator	Description		Example
-&&		Logical AND		(5 > 2) && (3 < 4) (true)		`
-!		Logical NOT		!(5 > 2) (false)
+y *= 5;   // Equivalent to y = y * 5
+console.log("Multiplication Assignment: " + y); // 10 * 5 = 50
 
-5. Ternary Operator
-The ternary operator is a shorthand for conditional statements.
+y /= 5;   // Equivalent to y = y / 5
+console.log("Division Assignment: " + y);      // 50 / 5 = 10
 
-Syntax:
-condition ? exprIfTrue : exprIfFalse
+/* 3. Comparison Operators */
+// Comparison operators are used to compare two values.
 
-Example:
+console.log("Equal to: " + (5 == "5"));             // true
+console.log("Strict equal: " + (5 === "5"));        // false
+console.log("Not equal: " + (5 != "6"));            // true
+console.log("Strict not equal: " + (5 !== "5"));    // true
+console.log("Greater than: " + (5 > 2));            // true
+console.log("Less than: " + (5 < 2));               // false
+console.log("Greater than or equal to: " + (5 >= 2)); // true
+console.log("Less than or equal to: " + (5 <= 2));  // false
+
+/* 4. Logical Operators */
+// Logical operators are used to combine or invert boolean expressions.
+
+console.log("Logical AND: " + ((5 > 2) && (3 < 4))); // true
+console.log("Logical NOT: " + !(5 > 2));            // false
+
+/* 5. Ternary Operator */
+// The ternary operator is a shorthand for conditional statements.
+
 let age = 18;
 let canVote = (age >= 18) ? "Yes" : "No";
-console.log(canVote); // Output: "Yes"
-
-
-
-
-
-
-
+console.log("Can Vote: " + canVote);   // Output: "Yes"
