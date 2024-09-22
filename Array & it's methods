@@ -1,0 +1,117 @@
+/*
+  Array Methods in JavaScript
+  JavaScript provides various methods to perform operations on arrays.
+  Below are some common array methods.
+*/
+
+/* 1. push() 
+   Adds one or more elements to the end of an array and returns the new length. */
+let fruits = ["Apple", "Banana"];
+fruits.push("Mango");
+console.log(fruits); // Output: ["Apple", "Banana", "Mango"]
+
+/* 2. pop() 
+   Removes the last element from an array and returns that element. */
+let lastFruit = fruits.pop();
+console.log(fruits);    // Output: ["Apple", "Banana"]
+console.log(lastFruit); // Output: "Mango"
+
+/* 3. shift() 
+   Removes the first element from an array and returns that element. */
+let firstFruit = fruits.shift();
+console.log(fruits);    // Output: ["Banana"]
+console.log(firstFruit); // Output: "Apple"
+
+/* 4. unshift() 
+   Adds one or more elements to the beginning of an array and returns the new length. */
+fruits.unshift("Apple");
+console.log(fruits); // Output: ["Apple", "Banana"]
+
+/* 5. concat() 
+   Merges two or more arrays and returns a new array. */
+let vegetables = ["Carrot", "Tomato"];
+let food = fruits.concat(vegetables);
+console.log(food); // Output: ["Apple", "Banana", "Carrot", "Tomato"]
+
+/* 6. slice() 
+   Returns a shallow copy of a portion of an array into a new array. */
+let slicedFruits = fruits.slice(1, 2);
+console.log(slicedFruits); // Output: ["Banana"]
+
+/* 7. splice() 
+   Adds/removes elements from an array and returns the removed elements. */
+fruits.splice(1, 1, "Orange");
+console.log(fruits); // Output: ["Apple", "Orange"]
+
+/* 8. forEach() 
+   Executes a provided function once for each array element. */
+fruits.forEach(function(item) {
+    console.log(item); // Output: Apple, Orange
+});
+
+/* 9. map() 
+   Creates a new array with the results of calling a provided function on every element. */
+let numbers = [1, 2, 3];
+let doubled = numbers.map(function(num) {
+    return num * 2;
+});
+console.log(doubled); // Output: [2, 4, 6]
+
+/* 10. filter() 
+   Creates a new array with all elements that pass the test implemented by the provided function. */
+let evenNumbers = numbers.filter(function(num) {
+    return num % 2 === 0;
+});
+console.log(evenNumbers); // Output: [2]
+
+/* 11. reduce() 
+   Executes a reducer function on each element of the array, resulting in a single output value. */
+let sum = numbers.reduce(function(acc, curr) {
+    return acc + curr;
+}, 0);
+console.log(sum); // Output: 6
+
+/* 12. sort() 
+   Sorts the elements of an array in place and returns the sorted array. */
+fruits = ["Banana", "Apple", "Mango"];
+fruits.sort();
+console.log(fruits); // Output: ["Apple", "Banana", "Mango"]
+
+// For numeric sorting:
+numbers = [4, 2, 3, 1];
+numbers.sort(function(a, b) {
+    return a - b;
+});
+console.log(numbers); // Output: [1, 2, 3, 4]
+
+/* Example Programs Using Arrays */
+
+// 1. Find the Maximum Number in an Array
+numbers = [5, 2, 9, 1, 7];
+let max = numbers[0];
+
+for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+        max = numbers[i];
+    }
+}
+console.log("Maximum number is: " + max); // Output: Maximum number is: 9
+
+// 2. Filter Even Numbers from an Array
+numbers = [1, 2, 3, 4, 5, 6];
+evenNumbers = numbers.filter(function(num) {
+    return num % 2 === 0;
+});
+console.log(evenNumbers); // Output: [2, 4, 6]
+
+// 3. Reverse an Array
+fruits = ["Apple", "Banana", "Mango"];
+let reversedFruits = fruits.reverse();
+console.log(reversedFruits); // Output: ["Mango", "Banana", "Apple"]
+
+// 4. Sum of All Elements in an Array
+numbers = [1, 2, 3, 4, 5];
+sum = numbers.reduce(function(acc, curr) {
+    return acc + curr;
+}, 0);
+console.log("Sum: " + sum); // Output: Sum: 15
