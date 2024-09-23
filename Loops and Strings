@@ -47,3 +47,97 @@ for (let fruit of fruits) {
     console.log(fruit); // Output: Apple Banana Mango
 }
 
+/*
+  JavaScript: Strings and Their Methods
+
+  A string in JavaScript is a sequence of characters used to represent text.
+  Strings can be created using single quotes ('), double quotes ("), or backticks (`).
+*/
+
+/* Declaring Strings */
+let str1 = "Hello, World!";  // Using double quotes
+let str2 = 'JavaScript is fun!';  // Using single quotes
+let str3 = `Template literals are cool!`;  // Using backticks for template literals
+
+/* String Methods in JavaScript */
+
+// 1. length
+// The length property returns the number of characters in a string.
+let text = "Hello, World!";
+console.log(text.length);  // Output: 13
+
+// 2. charAt()
+// Returns the character at a specified index in a string.
+let language = "JavaScript";
+console.log(language.charAt(0));  // Output: "J"
+
+// 3. indexOf()
+// Returns the index of the first occurrence of a specified substring.
+let sentence = "JavaScript is awesome!";
+console.log(sentence.indexOf("awesome"));  // Output: 15
+
+// 4. lastIndexOf()
+// Returns the index of the last occurrence of a specified substring.
+let longSentence = "JavaScript is awesome and JavaScript is fun!";
+console.log(longSentence.lastIndexOf("JavaScript"));  // Output: 29
+
+// 5. slice()
+// Extracts a section of a string and returns it as a new string.
+let greeting = "Hello, World!";
+let slicedText = greeting.slice(7, 12);  // Extracts from index 7 to 11
+console.log(slicedText);  // Output: "World"
+
+// 6. substring()
+// Similar to slice(), but does not accept negative indices.
+let subText = language.substring(0, 4);  // Extracts from index 0 to 3
+console.log(subText);  // Output: "Java"
+
+// 7. substr()
+// Returns a substring starting from a specified index, with a specified length.
+let substrText = greeting.substr(7, 5);  // Extracts 5 characters from index 7
+console.log(substrText);  // Output: "World"
+
+// 8. replace()
+// Replaces the first occurrence of a substring with a new substring.
+let replacedText = greeting.replace("World", "JavaScript");
+console.log(replacedText);  // Output: "Hello, JavaScript!"
+
+// 9. toUpperCase()
+// Converts a string to uppercase.
+let lowerCaseText = "hello";
+console.log(lowerCaseText.toUpperCase());  // Output: "HELLO"
+
+// 10. toLowerCase()
+// Converts a string to lowercase.
+let upperCaseText = "HELLO";
+console.log(upperCaseText.toLowerCase());  // Output: "hello"
+
+// 11. concat()
+// Joins two or more strings and returns a new string.
+let text1 = "Hello";
+let text2 = "World";
+let combinedText = text1.concat(", ", text2, "!");
+console.log(combinedText);  // Output: "Hello, World!"
+
+// 12. trim()
+// Removes whitespace from both ends of a string.
+let spacedText = "   Hello, World!   ";
+let trimmedText = spacedText.trim();
+console.log(trimmedText);  // Output: "Hello, World!"
+
+// 13. split()
+// Splits a string into an array of substrings based on a specified separator.
+let fruitList = "Apple, Banana, Mango";
+let fruits = fruitList.split(", ");
+console.log(fruits);  // Output: ["Apple", "Banana", "Mango"]
+
+// 14. includes()
+// Checks if a string contains a specified substring, returning true or false.
+let jsSentence = "JavaScript is awesome!";
+console.log(jsSentence.includes("awesome"));  // Output: true
+
+// 15. startsWith() and endsWith()
+// startsWith() checks if the string starts with a specified substring.
+// endsWith() checks if the string ends with a specified substring.
+console.log(jsSentence.startsWith("JavaScript"));  // Output: true
+console.log(jsSentence.endsWith("awesome!"));  // Output: true
