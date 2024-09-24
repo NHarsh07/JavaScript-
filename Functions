@@ -1,0 +1,72 @@
+// Functions and Methods in JavaScript
+
+// 1. Functions in JavaScript
+
+// 1.1. What is a Function?
+// A function in JavaScript is a reusable block of code that performs a specific task. 
+// Functions help with code reuse, modularity, and abstraction by breaking code into 
+// manageable parts, enabling you to focus on the function's behavior rather than implementation.
+
+// Functions take inputs (parameters), process them, and return an output.
+
+
+// 1.2. Defining a Function
+// Functions are defined using the `function` keyword followed by the function name, 
+// parameters (optional), and a block of code.
+
+// Syntax:
+function functionName(parameter1, parameter2) {
+  // code to be executed
+}
+
+// Example:
+function greet(name) {
+  return "Hello, " + name + "!";
+}
+
+// Usage:
+let greeting = greet("John");
+console.log(greeting);  // Output: Hello, John!
+
+
+// 1.3. Function Execution
+// A function must be invoked (or called) to execute its code. You invoke a function by 
+// writing its name followed by parentheses (). If the function has parameters, 
+// you pass arguments inside the parentheses.
+
+greet("Alice");  // Function call
+
+
+// 1.4. Functions with Default Parameters
+// JavaScript allows functions to have default parameter values. 
+// If a function is called without an argument, the default value is used.
+
+function multiply(a, b = 1) {
+  return a * b;
+}
+
+console.log(multiply(5));     // Output: 5 (since b defaults to 1)
+console.log(multiply(5, 3));  // Output: 15
+
+
+// 1.5. Anonymous Functions
+// An anonymous function is a function without a name. They are commonly used 
+// as arguments to other functions or as immediate expressions, 
+// like in event handlers or callback functions.
+
+let multiplyAnonymous = function(a, b) {
+  return a * b;
+};
+
+console.log(multiplyAnonymous(4, 5));  // Output: 20
+
+
+// 1.6. Arrow Functions
+// Arrow functions, introduced in ES6, are a shorter syntax for writing functions. 
+// They are anonymous and omit the `function` keyword. Arrow functions are useful 
+// for writing short, concise functions, particularly callback functions.
+
+const greetArrow = (name) => "Hello, " + name + "!";
+
+console.log(greetArrow("Alice"));  // Output: Hello, Alice!
+
